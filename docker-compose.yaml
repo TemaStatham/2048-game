@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: my_node_app
+    ports:
+      - "8080:8080"
+    command: ["node", "server.js"]
+
+  app2:
+    build: .
+    container_name: my_node_app2
+    ports:
+      - "8081:8080"
+    command: [ "node", "server.js" ]
+
